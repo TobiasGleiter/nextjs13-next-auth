@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 
 export interface IHeader {}
 
-const navigation = [
+const _navigation = [
   { name: 'Home', href: '/', as: '/' },
   { name: 'Client', href: '/client', as: '/client' },
   { name: 'Middleware', href: '/middleware', as: '/middleware' },
@@ -13,8 +13,8 @@ const navigation = [
 ];
 
 const Header: React.FC<IHeader> = () => {
-  let path = usePathname();
-  const { data: session } = useSession();
+  let _path = usePathname();
+  const { data: _session } = useSession();
 
   return (
     <header>

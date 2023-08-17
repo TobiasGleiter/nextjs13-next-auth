@@ -1,8 +1,7 @@
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { authOptions } from '@/app/api/auth/[...nextauth]/options';
 import { getServerSession } from 'next-auth/next';
-import type { NextRequest } from 'next/server';
 
-export default async function Protected(req: NextRequest): Promise<any> {
+export default async function Protected(): Promise<any> {
   const session = await getServerSession(authOptions);
 
   return (
