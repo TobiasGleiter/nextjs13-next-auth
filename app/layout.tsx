@@ -1,3 +1,4 @@
+import Footer from '@/components/navigation/footer/Footer';
 import Header from '@/components/navigation/header/Header';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -18,10 +19,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} w-full h-72 bg-gradient-to-r from-purple-500 to-purple-900 `}
+      >
         <Providers>
           <Header />
           <main>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>
