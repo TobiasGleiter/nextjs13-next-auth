@@ -24,13 +24,13 @@ const Header: React.FC<IHeader> = () => {
 
   return (
     <header className="z-10 relative">
-      <nav className="fixed top-3 left-1/2 -translate-x-1/2 max-w-xs lg:max-w-4xl w-full py-2 pl-2.5 pr-6 bg-white/70 backdrop-blur-md rounded-full">
+      <nav className="fixed top-3 left-1/2 -translate-x-1/2 max-w-xs lg:max-w-4xl w-full py-2 pl-2.5 pr-6 bg-white/70 backdrop-blur-md rounded-full ">
         <div className="flex w-full justify-between items-center text-black">
-          <div className="flex items-center font-light">
+          <div className="flex items-center font-light text-sm ">
             <Link href="https://nextjs.org/" target="_blank">
               <BaseIcon icon="Nextjs" style="w-8 h-8" />
             </Link>
-            <p className="ml-1">and</p>
+            <p className="ml-1">with</p>
             <Link
               href="https://next-auth.js.org/"
               target="_blank"
@@ -38,6 +38,7 @@ const Header: React.FC<IHeader> = () => {
             >
               NextAuth.js
             </Link>
+            <p className="ml-1">Example.</p>
           </div>
           <div className="lg:hidden text-sm">
             <button onClick={() => setMobileMenuOpen(true)}>menu</button>
