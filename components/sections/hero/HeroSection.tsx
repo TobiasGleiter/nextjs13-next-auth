@@ -13,7 +13,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
         </span>
         , it{"'"}s about the{' '}
         <span className="bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent">
-          authentication
+          authentification
         </span>
         .
       </h1>
@@ -28,7 +28,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
       >
         <p className="">Pull the project from</p>
         <BaseIcon
-          icon="Github"
+          icon="github"
           style="animate-bounce ml-2 w-6 h-6 text-white"
         />
       </Link>

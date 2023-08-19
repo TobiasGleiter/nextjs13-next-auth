@@ -2,7 +2,7 @@
 import BaseIcon from '@/components/icons/base/BaseIcon';
 import { Dialog, Transition } from '@headlessui/react';
 import { motion } from 'framer-motion';
-import { signOut, useSession } from 'next-auth/react';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Fragment, useState } from 'react';
@@ -28,7 +28,7 @@ const Header: React.FC<IHeader> = () => {
         <div className="flex w-full justify-between items-center text-black">
           <div className="flex items-center font-light text-sm ">
             <Link href="https://nextjs.org/" target="_blank">
-              <BaseIcon icon="Nextjs" style="w-8 h-8" />
+              <BaseIcon icon="nextjs" style="w-8 h-8" />
             </Link>
             <p className="ml-1">with</p>
             <Link
@@ -60,12 +60,12 @@ const Header: React.FC<IHeader> = () => {
               );
             })}
             {session && (
-              <button
-                onClick={() => signOut()}
+              <Link
+                href="/auth/signout"
                 className="p-2 text-xs rounded-lg border shadow-lg duration-300"
               >
                 Sign Out
-              </button>
+              </Link>
             )}
           </ul>
         </div>
@@ -112,12 +112,12 @@ const Header: React.FC<IHeader> = () => {
                   </Link>
                 ))}
                 {session && (
-                  <button
-                    onClick={() => signOut()}
+                  <Link
+                    href="/auth/signout"
                     className="p-2 text-xs rounded-lg border shadow-lg duration-300"
                   >
                     Sign Out
-                  </button>
+                  </Link>
                 )}
               </div>
             </Dialog.Panel>

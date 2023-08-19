@@ -18,7 +18,7 @@ export default function ClientSideRoot(): any {
   }
 
   return (
-    <div className="grid grid-cols-2 text-white p-4">
+    <div className="pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <div>
         <h1 className="leading-loose font-extrabold text-accent">
           Hi {session?.user?.name}!

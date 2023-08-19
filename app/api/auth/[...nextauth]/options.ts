@@ -8,10 +8,11 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GITHUB_SECRET as string,
     }),
   ],
-  /*
-    pages: {
-      signIn: '/signin',
-    },
-    */
+
+  pages: {
+    signIn: '/auth/signin',
+    signOut: '/auth/signout',
+  },
+
   session: { strategy: 'jwt' },
 };

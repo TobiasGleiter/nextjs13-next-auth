@@ -5,7 +5,7 @@ export default async function Protected(): Promise<any> {
   const session = await getServerSession(authOptions);
 
   return (
-    <div className="grid grid-cols-2 text-white p-4">
+    <div className="pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <div>
         {session !== null ? (
           <h1 className="leading-loose font-extrabold text-accent">
