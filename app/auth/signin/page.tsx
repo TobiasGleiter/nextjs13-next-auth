@@ -1,6 +1,6 @@
 import SignInButton from '@/components/button/signin/SignInButton';
+import SpinnerLoading from '@/components/loading/spinner/SpinnerLoading';
 import { Suspense } from 'react';
-import Loading from './loading';
 
 // The providers can also be fetched from nextauth
 const providers = [{ label: 'GitHub', provider: 'github', icon: 'github' }];
@@ -15,7 +15,7 @@ export default function SignInPage() {
           </h1>
           <div className="mb-2">
             {/** React Suspense along with a fallback aids in promptly displaying the Login page. */}
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<SpinnerLoading />}>
               {/** Incorporate additional providers, ensuring that the Icon is included within BaseIcon(). */}
               {providers.map((provider: any) => {
                 return (
@@ -31,8 +31,10 @@ export default function SignInPage() {
           </div>
           <div className="text-center text-sm mx-4">
             <p>
-              You can log in or sign in. Your data will not be stored or
-              processed!
+              You have the option to log in or sign in. Your data will neither
+              be stored nor processed. This functionality is exclusively
+              operational on http://localhost:3000 {'(locally)'} and requires
+              the use of your personal key from GitHub OAuth.
             </p>
           </div>
         </div>

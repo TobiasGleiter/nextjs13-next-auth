@@ -1,6 +1,6 @@
 import SignOutButton from '@/components/button/signout/SignOutButton';
+import SpinnerLoading from '@/components/loading/spinner/SpinnerLoading';
 import { Suspense } from 'react';
-import Loading from './loading';
 
 export default function SignOutPage() {
   return (
@@ -13,7 +13,7 @@ export default function SignOutPage() {
           <p className="mb-2">Are you sure you want to sign out?</p>
           <div className="mb-2">
             {/** React Suspense along with a fallback aids in promptly displaying the Signout page. */}
-            <Suspense fallback={<Loading />}>
+            <Suspense fallback={<SpinnerLoading />}>
               {/**  */}
               <SignOutButton label="Sign out" />
             </Suspense>

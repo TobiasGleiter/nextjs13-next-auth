@@ -4,7 +4,11 @@ const InfoSection: React.FC<IInfoSection> = () => {
   return (
     <section className="snap-start snap-normal pt-20 bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <h2 className="font-semibold text-4xl mb-2 ">
-        This project uses various approaches to achieve authentication:
+        This project uses{' '}
+        <span className="bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent">
+          various approaches
+        </span>{' '}
+        to achieve authentification:
       </h2>
       <ul className="mb-6 space-y-2 cursor-default">
         <li className="bg-violet-200 px-2 py-2.5 rounded-lg text-black text-sm">
@@ -21,8 +25,8 @@ const InfoSection: React.FC<IInfoSection> = () => {
         </li>
       </ul>
       <p className="mb-2">
-        If yoou attempt to access a protected page, and you will be redirected
-        to the sign-in page.
+        If you attempt to access a protected page, and you will be redirected to
+        the sign-in page.
       </p>
     </section>
   );

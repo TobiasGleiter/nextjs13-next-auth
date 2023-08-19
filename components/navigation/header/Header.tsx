@@ -62,7 +62,7 @@ const Header: React.FC<IHeader> = () => {
             {session && (
               <Link
                 href="/auth/signout"
-                className="p-2 text-xs rounded-lg border shadow-lg duration-300"
+                className="p-2 text-xs rounded-lg border shadow-lg duration-300 hover:bg-yellow-300/70"
               >
                 Sign Out
               </Link>

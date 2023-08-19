@@ -46,7 +46,7 @@ const SignInButton: React.FC<ISignInButton> = ({
 
   return (
     <button
-      className={`inline-flex rounded-full pl-6 pr-7 py-1 lg:hover:bg-yellow-300 lg:hover:text-black duration-300 ${
+      className={`inline-flex rounded-full pl-6 pr-7 py-1 shadow-lg lg:hover:bg-yellow-300/70 lg:hover:text-black duration-300 ${
         primary ? 'bg-white text-black ' : 'bg-black text-white'
       } ${style} ${size} justify-center items-center `}
       onClick={() => handleSignIn(provider, search)}

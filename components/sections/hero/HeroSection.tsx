@@ -23,14 +23,11 @@ const HeroSection: React.FC<IHeroSection> = () => {
       </h2>
       <Link
         href="https://github.com/TobiasGleiter/nextjs13-next-auth"
-        className="flex group lg:hover:font-bold duration-200 items-center underline-offset-2 w-fit py-2"
+        className="flex lg:hover:font-bold duration-200 items-center w-fit py-2"
         target="_blank"
       >
-        <p className="">Pull the project from</p>
-        <BaseIcon
-          icon="github"
-          style="animate-bounce ml-2 w-6 h-6 text-white"
-        />
+        <p className="underline underline-offset-2">Pull the project from</p>
+        <BaseIcon icon="github" style="ml-2 w-6 h-6 text-white" />
       </Link>
     </section>
   );

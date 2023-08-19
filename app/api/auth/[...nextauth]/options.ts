@@ -13,6 +13,5 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/signin',
     signOut: '/auth/signout',
   },
-
   session: { strategy: 'jwt' },
 };
