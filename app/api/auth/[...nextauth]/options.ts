@@ -15,4 +15,9 @@ export const authOptions: NextAuthOptions = {
     error: '/auth/error', // Error code passed in query string as ?error=
   },
   session: { strategy: 'jwt' },
+  callbacks: {
+    async session({ session, user, token }) {
+      return session;
+    },
+  },
 };
