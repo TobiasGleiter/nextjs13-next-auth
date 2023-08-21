@@ -1,4 +1,5 @@
 import MiddlewareData from '@/components/data/middleware/MiddlewareData';
+import { Suspense } from 'react';
 
 export default async function MiddlewareProtectedPage() {
   return (
@@ -19,7 +20,9 @@ export default async function MiddlewareProtectedPage() {
           component to achieve interactivity.
         </h2>
       </div>
-      <MiddlewareData />
+      <Suspense fallback="Loading...">
+        <MiddlewareData />
+      </Suspense>
     </div>
   );
 }

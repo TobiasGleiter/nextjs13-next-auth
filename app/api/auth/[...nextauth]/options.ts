@@ -12,6 +12,7 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/signin',
     signOut: '/auth/signout',
     error: '/auth/error', // Error code passed in query string as ?error=
+    newUser: '/auth/new-user', // New users will be directed here on first sign in (leave the property out if not of interest)
   },
   session: { strategy: 'jwt' },
   callbacks: {
