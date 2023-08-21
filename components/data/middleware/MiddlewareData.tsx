@@ -8,7 +8,7 @@ const MiddlewareData: React.FC<IMiddlewareData> = () => {
   const { data: session } = useSession();
 
   return (
-    <div className="space-y-2 ">
+    <div className="space-y-2 bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent">
       <p className="">
         User data is fetched using useSession on the client side, but in a
         different component than this page. This implies that the page loads

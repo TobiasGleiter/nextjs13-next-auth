@@ -25,7 +25,7 @@ export default async function ServerProtectedPage(): Promise<any> {
           a promise down to a use client component.
         </h2>
       </div>
-      <div className="space-y-2 ">
+      <div className="space-y-2 text-neutral-300">
         <p className="">
           User data is fetched using useSession on the client side, but in a
           different component than this page. This implies that the page loads

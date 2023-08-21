@@ -5,7 +5,7 @@ export interface IHeroSection {}
 
 const HeroSection: React.FC<IHeroSection> = () => {
   return (
-    <section className="snap-start snap-normal pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
+    <section className="realtive snap-start snap-always pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <h1 className="font-bold text-4xl mb-4 ">
         It{"'"}s not about the{' '}
         <span className="bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent">
@@ -13,7 +13,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
         </span>
         , it{"'"}s about the{' '}
         <span className="bg-gradient-to-r from-amber-200 to-yellow-400 bg-clip-text text-transparent">
-          authentification
+          authentication
         </span>
         .
       </h1>
@@ -28,7 +28,7 @@ const HeroSection: React.FC<IHeroSection> = () => {
       >
         <p className="underline underline-offset-2">Pull the project from</p>
         <BaseIcon icon="github" style="ml-2 w-6 h-6 text-white" />
-      </Link>
+      </Link>{' '}
     </section>
   );
 };

@@ -1,6 +1,4 @@
 import MiddlewareData from '@/components/data/middleware/MiddlewareData';
-import SpinnerLoading from '@/components/loading/spinner/SpinnerLoading';
-import { Suspense } from 'react';
 
 export default async function MiddlewareProtectedPage() {
   return (
@@ -21,9 +19,15 @@ export default async function MiddlewareProtectedPage() {
           component to achieve interactivity.
         </h2>
       </div>
-      <Suspense fallback={<SpinnerLoading />}>
-        <MiddlewareData />
-      </Suspense>
+      <MiddlewareData />
+    </div>
+  );
+}
+
+export function Loading() {
+  return (
+    <div className="absolute top-0 left-0 bg-red-300 text-white w-32">
+      Loading...
     </div>
   );
 }
