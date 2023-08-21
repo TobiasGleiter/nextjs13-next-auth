@@ -23,7 +23,7 @@ const Header: React.FC<IHeader> = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="z-10 relative">
+    <header className="z-10 relative m-0 p-0">
       <nav className="fixed top-3 left-1/2 -translate-x-1/2 max-w-xs lg:max-w-4xl w-full py-2 pl-2.5 pr-6 bg-white/70 backdrop-blur-md rounded-full ">
         <div className="flex w-full justify-between items-center text-black">
           <div className="flex items-center font-light text-sm ">

@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         //bg-gradient-to-r from-purple-500 to-purple-900
-        className={`${inter.className} w-full h-72 bg-gradient-to-r from-purple-500 to-purple-900`}
+        className={`${inter.className} w-full bg-gradient-to-r from-purple-500 to-purple-900`}
       >
         <Providers>
           <main>{children}</main>

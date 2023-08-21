@@ -1,11 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const LazyHeader = dynamic(
-  () => import('../../components/navigation/header/Header'),
-  {
-    loading: () => <></>,
-  }
-);
+import Header from '../../components/navigation/header/Header';
 
 export default async function MainLayout({
   children,
@@ -14,7 +7,7 @@ export default async function MainLayout({
 }) {
   return (
     <>
-      <LazyHeader />
+      <Header />
       <div className="max-w-xs lg:max-w-4xl flex flex-col mx-auto min-h-screen">
         {children}
       </div>
