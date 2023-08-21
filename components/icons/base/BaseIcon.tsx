@@ -1,4 +1,4 @@
-import { ImArrowDown2, ImSpinner9 } from 'react-icons/im';
+import { ImArrowDown2, ImArrowUpRight2, ImSpinner9 } from 'react-icons/im';
 import { SiGithub, SiNextdotjs } from 'react-icons/si';
 
 const ICONS_MAP: any = {
@@ -6,6 +6,7 @@ const ICONS_MAP: any = {
   github: <SiGithub />,
   spinner: <ImSpinner9 />,
   arrowdown: <ImArrowDown2 />,
+  arrowrightup: <ImArrowUpRight2 />,
 };
 
 export interface IBaseIcon {

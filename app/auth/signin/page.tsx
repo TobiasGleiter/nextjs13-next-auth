@@ -32,9 +32,7 @@ export default function SignInPage() {
           <div className="text-center text-sm mx-4">
             <p>
               You have the option to log in or sign in. Your data will neither
-              be stored nor processed. This functionality is exclusively
-              operational on http://localhost:3000 {'(locally)'} and requires
-              the use of your personal key from GitHub OAuth.
+              be stored nor processed.
             </p>
           </div>
         </div>
