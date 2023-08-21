@@ -23,11 +23,3 @@ export default async function MiddlewareProtectedPage() {
     </div>
   );
 }
-
-export function Loading() {
-  return (
-    <div className="absolute top-0 left-0 bg-red-300 text-white w-32">
-      Loading...
-    </div>
-  );
-}
