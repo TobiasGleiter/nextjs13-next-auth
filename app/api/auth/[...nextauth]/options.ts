@@ -48,7 +48,7 @@ export const authOptions: NextAuthOptions = {
         const updatedUser = await collection.findOne({ email: user.email });
 
         if (updatedUser) {
-          token.id = updatedUser.id;
+          token.id = updatedUser._id;
           token.paymentId = updatedUser.paymentId;
           //
           console.log(updatedUser);
