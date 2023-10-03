@@ -1,5 +1,18 @@
 # nextjs13-ts-tailwind-husky-eslint-template
 
+## Varoius protections
+
+This project uses various approaches to achieve authentication:
+
+- Client-side protection /w useSession
+- Server-side protection /w Middleware
+- Server-side protection /w getServerSession
+
+E.g. Middleware:
+![alt text](https://github.com/TobiasGleiter/nextjs13-next-auth/blob/main/documentation/Nextjs13Auth-Middleware.png)
+
+# About the next.js project
+
 This is a [Next.js](https://nextjs.org/) template with following addons:
 
 - [TypeScript](https://www.typescriptlang.org/), [ESLint](https://eslint.org/) and [Husky](https://typicode.github.io/husky/)
