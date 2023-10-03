@@ -1,6 +1,6 @@
 # nextjs13-ts-tailwind-husky-eslint-template
 
-## Varoius protections
+## Various protections
 
 This project uses various approaches to achieve authentication:
 
