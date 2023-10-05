@@ -1,5 +1,7 @@
 # nextjs13-ts-tailwind-husky-eslint-template
 
+![banner](https://github.com/TobiasGleiter/nextjs13-next-auth/blob/main/documentation/bannerNextAuthNextjs.png)
+
 ## Various protections
 
 This project uses various approaches to achieve authentication:
@@ -9,7 +11,7 @@ This project uses various approaches to achieve authentication:
 - Server-side protection /w getServerSession
 
 E.g. Middleware:
-![alt text](https://github.com/TobiasGleiter/nextjs13-next-auth/blob/main/documentation/Nextjs13Auth-Middleware.png)
+![Middleware example](https://github.com/TobiasGleiter/nextjs13-next-auth/blob/main/documentation/Nextjs13Auth-Middleware.png)
 
 # About the next.js project
 
@@ -119,3 +121,7 @@ nextjs13-ts-tailwind-husky-eslint-template
 └── stories (...)
 └── (...)
 ```
+
+# Contact
+
+If you have any questions or suggestions, feel free to reach out to me at gleiter.tobias@outlook.de
