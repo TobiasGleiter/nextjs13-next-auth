@@ -1,4 +1,4 @@
-# nextjs13-ts-tailwind-husky-eslint-template
+# Next.js 13 with NextAuth
 
 ![banner](https://github.com/TobiasGleiter/nextjs13-next-auth/blob/main/documentation/bannerNextAuthNextjs.png)
 
