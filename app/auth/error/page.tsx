@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 
-export default function AuthErrorPage({ reset }: any) {
+export default function AuthErrorPage() {
   const searchParams = useSearchParams();
 
   const error = searchParams.get('error');
