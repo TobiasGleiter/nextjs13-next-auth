@@ -9,11 +9,14 @@ declare module 'next-auth' {
       name: string;
       image: string;
       email: string;
-      paymentId: string;
+      role: string;
     };
   }
   interface User {
-    paymentId: string; // Assuming this is the MongoDB user ID
-    // Add other custom properties here
+    id?: string | ObjectId;
+    name?: string | null;
+    email?: string | null;
+    image?: string | null;
+    role: string;
   }
 }
