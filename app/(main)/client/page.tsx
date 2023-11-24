@@ -20,6 +20,26 @@ export default function ClientSideProtectedPage(): any {
     setShown(!shown);
   };
 
+  const deleteUser = async () => {
+    try {
+      const response = await fetch('/api/user/delete', {
+        method: 'POST',
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log('User deleted:', result);
+        // Handle successful deletion here
+      } else {
+        console.error('Failed to delete user:', response.statusText);
+        // Handle errors here
+      }
+    } catch (error) {
+      console.error('Error during fetch:', error);
+      // Handle network errors here
+    }
+  };
+
   return (
     <div className="pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <div className="space-y-2 mb-4">
@@ -40,6 +60,12 @@ export default function ClientSideProtectedPage(): any {
           Userdata fetched /w useSession on client side:{' '}
           <span className="font-bold">{session?.user?.name}</span>
         </p>
+        <button
+          className="bg-gradient-to-r from-red-4600 text-black p-2 rounded-md text-xs"
+          onClick={deleteUser}
+        >
+          Delete User
+        </button>
         <button
           className="bg-gradient-to-r from-amber-200 to-yellow-400 text-black p-2 rounded-md text-xs"
           onClick={clickHandler}
