@@ -1,6 +1,6 @@
 'use client';
 
-import { useSession } from 'next-auth/react';
+import { signOut, useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 import { useState } from 'react';
 
@@ -29,7 +29,8 @@ export default function ClientSideProtectedPage(): any {
       if (response.ok) {
         const result = await response.json();
         console.log('User deleted:', result);
-        // Handle successful deletion here
+
+        signOut({ redirect: false });
       } else {
         console.error('Failed to delete user:', response.statusText);
         // Handle errors here

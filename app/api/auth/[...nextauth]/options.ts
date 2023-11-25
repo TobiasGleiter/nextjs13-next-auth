@@ -37,11 +37,12 @@ export const authOptions: NextAuthOptions = {
   events: {},
   session: { strategy: 'jwt' }, // use the jwt strategy to secure the pages with middleware
   callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
+    async jwt({ token, user, account }) {
+      if (account && user) {
         token.id = user.id;
         token.role = user.role;
       }
+
       return token;
     },
     async session({ session, token }) {

@@ -11,6 +11,7 @@ declare module 'next-auth' {
       email: string;
       role: string;
     };
+    expires: string;
   }
   interface User {
     id: string | ObjectId;
