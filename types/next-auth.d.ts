@@ -4,13 +4,7 @@ import 'next-auth';
 // Extend the existing Session type with the 'id' property
 declare module 'next-auth' {
   interface Session {
-    user: {
-      id: string | ObjectId;
-      name: string;
-      image: string;
-      email: string;
-      role: string;
-    };
+    user: User;
     expires: string;
   }
   interface User {
@@ -19,5 +13,6 @@ declare module 'next-auth' {
     email?: string | null;
     image?: string | null;
     role: string;
+    accessToken?: string;
   }
 }
