@@ -3,7 +3,10 @@ import SpinnerLoading from '@/components/loading/spinner/SpinnerLoading';
 import { Suspense } from 'react';
 
 // The providers can also be fetched from nextauth
-const providers = [{ label: 'GitHub', provider: 'github', icon: 'github' }];
+const providers = [
+  { label: 'GitHub', provider: 'github', icon: 'github' },
+  { label: 'Google', provider: 'google', icon: 'google' },
+];
 
 export default function SignInPage() {
   return (
@@ -15,17 +18,19 @@ export default function SignInPage() {
         <div className="mb-2">
           {/** React Suspense along with a fallback aids in promptly displaying the Login page. */}
           <Suspense fallback={<SpinnerLoading />}>
-            {/** Incorporate additional providers, ensuring that the Icon is included within BaseIcon(). */}
-            {providers.map((provider: any) => {
-              return (
-                <SignInButton
-                  key={provider.label}
-                  label={provider.label}
-                  provider={provider.provider}
-                  icon={provider.icon}
-                />
-              );
-            })}
+            <div className="flex flex-col gap-2">
+              {/** Incorporate additional providers, ensuring that the Icon is included within BaseIcon(). */}
+              {providers.map((provider: any) => {
+                return (
+                  <SignInButton
+                    key={provider.label}
+                    label={provider.label}
+                    provider={provider.provider}
+                    icon={provider.icon}
+                  />
+                );
+              })}
+            </div>
           </Suspense>
         </div>
         <div className="text-center text-sm mx-4">

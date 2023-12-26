@@ -6,6 +6,8 @@ declare module 'next-auth' {
   interface Session {
     user: User;
     expires: string;
+    access_token?: string;
+    error?: string;
   }
   interface User {
     id: string | ObjectId;
@@ -13,6 +15,10 @@ declare module 'next-auth' {
     email?: string | null;
     image?: string | null;
     role: string;
-    accessToken?: string;
   }
+}
+
+declare module 'next-auth/jwt' {
+  /** Returned by the `jwt` callback and `getToken`, when using JWT sessions */
+  interface JWT {}
 }

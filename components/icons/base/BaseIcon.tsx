@@ -1,9 +1,10 @@
 import { ImArrowDown2, ImArrowUpRight2, ImSpinner9 } from 'react-icons/im';
-import { SiGithub, SiNextdotjs } from 'react-icons/si';
+import { SiGithub, SiGoogle, SiNextdotjs } from 'react-icons/si';
 
 const ICONS_MAP: any = {
   nextjs: <SiNextdotjs />,
   github: <SiGithub />,
+  google: <SiGoogle />,
   spinner: <ImSpinner9 />,
   arrowdown: <ImArrowDown2 />,
   arrowrightup: <ImArrowUpRight2 />,

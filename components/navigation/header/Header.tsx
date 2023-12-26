@@ -14,7 +14,11 @@ const navigation = [
   { name: 'Client', href: '/client', as: '/client' },
   { name: 'Middleware', href: '/middleware', as: '/middleware' },
   { name: 'Server', href: '/server', as: '/server' },
-  { name: 'Data (external API)', href: '/data', as: '/data' },
+  {
+    name: 'Data (external API)',
+    href: '/middleware/data',
+    as: '/middleware/data',
+  },
 ];
 
 const Header: React.FC<IHeader> = () => {
