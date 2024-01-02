@@ -89,5 +89,10 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ['/middleware/:path*', '/middleware/data', '/api/middleware'],
+  matcher: [
+    '/middleware/:path*',
+    '/middleware/data',
+    '/api/middleware',
+    '/task/:path*',
+  ],
 };
