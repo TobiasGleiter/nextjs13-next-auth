@@ -14,7 +14,7 @@ interface Task {
 }
 
 export default function ClientPage() {
-  const { data, isLoading } = useSWR('/api/task', fetcher);
+  const { data, error, isLoading } = useSWR('/api/task', fetcher);
 
   const [tasks, setTasks] = useState<Task[]>([]);
 
@@ -32,6 +32,7 @@ export default function ClientPage() {
       </div>
     );
   }
+
   return (
     <div className="pt-20  bg-gradient-to-r from-neutral-300 to-stone-400 bg-clip-text text-transparent h-screen">
       <div className="space-y-2 mb-4">
@@ -49,14 +50,17 @@ export default function ClientPage() {
       </div>
       <div className="space-y-2 text-neutral-300">
         <TaskForm />
-        <p className="">Data Loaded from the external API endpoint:</p>
-        {tasks.map((task: Task, i: number) => {
-          return (
-            <div key={task.created_at} className="bg-white/20 rounded p-2">
-              {i + 1}: {task.title}
-            </div>
-          );
-        })}
+        {!error ? (
+          tasks.map((task: Task, i: number) => {
+            return (
+              <div key={task.created_at} className="bg-white/20 rounded p-2">
+                {i + 1}: {task.title}
+              </div>
+            );
+          })
+        ) : (
+          <h1>Sorry.. there was an error</h1>
+        )}
       </div>
     </div>
   );

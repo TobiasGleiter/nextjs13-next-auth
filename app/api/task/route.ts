@@ -12,10 +12,11 @@ export async function GET() {
   });
 
   // Make the call to external API endpoint with bearer token
-  const res = await fetch('http://localhost:8080/task', {
+  const res = await fetch(process.env.API_URL + '/task', {
     headers: {
       Authorization: `Bearer ${bearerToken}`,
     },
+    cache: 'force-cache',
   });
 
   if (!res.ok) {
@@ -23,6 +24,8 @@ export async function GET() {
   }
 
   const data = await res.json();
+
+  console.log(data.data);
 
   return NextResponse.json(data.data, { status: data.status });
 }
@@ -41,7 +44,7 @@ export async function POST(req: Request) {
   };
 
   // Make the call to external API endpoint with bearer token
-  const res = await fetch('http://localhost:8080/task', {
+  const res = await fetch(process.env.API_URL + '/task', {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${bearerToken}`,
