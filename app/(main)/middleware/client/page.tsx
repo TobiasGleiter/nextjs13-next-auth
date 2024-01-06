@@ -1,9 +1,8 @@
 'use client';
 import TaskForm from '@/components/form/TaskForm';
+import { fetcher } from '@/lib/helper/fetcher';
 import { useEffect, useState } from 'react';
 import useSWR from 'swr';
-
-export const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 interface Task {
   user_id: string;

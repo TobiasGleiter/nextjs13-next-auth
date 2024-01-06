@@ -1,8 +1,6 @@
 import clientPromise from '@/lib/mongodb/mongodb';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
-import { JwtPayload, decode, sign } from 'jsonwebtoken';
 import { NextAuthOptions } from 'next-auth';
-import { JWT } from 'next-auth/jwt';
 import GithubProvider from 'next-auth/providers/github';
 import GoogleProvider from 'next-auth/providers/google';
 
@@ -79,8 +77,8 @@ export const authOptions: NextAuthOptions = {
       if (account && user) {
         token.id = user.id;
         token.role = user.role;
-        token.access_token = generateAccessToken(user);
-        console.log(token.access_token);
+        //token.access_token = generateAccessToken(user);
+        //console.log(token.access_token);
       }
 
       // check if token.access_token.expires_at
@@ -111,27 +109,27 @@ export const authOptions: NextAuthOptions = {
   },
 };
 
-const generateAccessToken = (user: any) => {
-  // Define the payload to be included in the token
-  const payload = {
-    // Add necessary user data to the payload (e.g., user ID, role, etc.)
-    userId: user.id,
-    // Add other relevant user data...
-  };
+// const generateAccessToken = (user: any) => {
+//   // Define the payload to be included in the token
+//   const payload = {
+//     // Add necessary user data to the payload (e.g., user ID, role, etc.)
+//     userId: user.id,
+//     // Add other relevant user data...
+//   };
 
-  // Define token options (e.g., expiration time)
-  const options = {
-    expiresIn: '60m', // Set the token expiration time (e.g., 1 hour)
-  };
+//   // Define token options (e.g., expiration time)
+//   const options = {
+//     expiresIn: '60m', // Set the token expiration time (e.g., 1 hour)
+//   };
 
-  // Generate the access token using the payload, secret key, and options
-  const accessToken = sign(payload, process.env.JWT_SECRET as string, options);
-  return accessToken;
-};
+//   // Generate the access token using the payload, secret key, and options
+//   const accessToken = sign(payload, process.env.JWT_SECRET as string, options);
+//   return accessToken;
+// };
 
-const decodeToken = (token: any): JWT => {
-  // Verify and decode the token using the secret key
-  const decodedToken = decode(token) as JwtPayload;
-  //console.log('token: ', decodedToken);
-  return decodedToken;
-};
+// const decodeToken = (token: any): JWT => {
+//   // Verify and decode the token using the secret key
+//   const decodedToken = decode(token) as JwtPayload;
+//   //console.log('token: ', decodedToken);
+//   return decodedToken;
+// };

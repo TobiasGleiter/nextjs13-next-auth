@@ -42,7 +42,7 @@ const SignInButton: React.FC<ISignInButton> = ({
   icon,
 }) => {
   const searchParams = useSearchParams();
-  const search = searchParams.get('callbackUrl');
+  const search = searchParams && searchParams.get('callbackUrl');
 
   return (
     <button
