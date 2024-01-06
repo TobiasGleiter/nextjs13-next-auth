@@ -10,6 +10,14 @@ const nextConfig = {
     MONGO_DB_URI: process.env.MONGO_DB_URI,
     MONGO_DB_NAME: process.env.MONGO_DB_NAME,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/task',
+        destination: `${process.env.API_URL}/task`,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

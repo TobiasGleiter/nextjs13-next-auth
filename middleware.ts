@@ -93,6 +93,6 @@ export const config = {
     '/middleware/:path*',
     '/middleware/data',
     '/api/middleware',
-    '/task/:path*',
+    '/api/task',
   ],
 };

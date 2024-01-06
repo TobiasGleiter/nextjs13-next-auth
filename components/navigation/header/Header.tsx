@@ -15,7 +15,12 @@ const navigation = [
   { name: 'Middleware', href: '/middleware', as: '/middleware' },
   { name: 'Server', href: '/server', as: '/server' },
   {
-    name: 'Data (external API)',
+    name: 'Data Client External API',
+    href: '/middleware/client',
+    as: '/middleware/client',
+  },
+  {
+    name: 'Data Server External API',
     href: '/middleware/data',
     as: '/middleware/data',
   },
